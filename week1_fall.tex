@@ -8,21 +8,43 @@
 \pagestyle{empty}
 {\large\textbf{Research Notes}}
 \begin{itemize}
-    \item[*] Created on Sept 3,2014
+    \item[*] Created on Sept 3, 2014
     \item[*] Modified on \today
     \item[*] Author info: Boyou Zhou\\
              8 St Mary's St, PHO 340, Boston, MA 02215\\
              Email: bobzhou@bu.edu, Phone: 617-678-8480
 \end{itemize}
 
+
 \rule[-0.1cm]{7.5in}{0.01cm}\\
 \\
 \noindent \textbf{Sept 3,2004}
 \textit{A 10.4pJ/b (32,8) LDPC Decoder with Time-Domain Analog and Digital Mixed-Signal Processing}
-		\begin{itemize}
-			\item  \\
+\indent		\begin{itemize}
+			\item \textit{Main motivation}  Most of the analog computation circuits have a much higher efficiency in computational operation.
+            The paper argued that the time-domain analog and digital mixed signal will be more effective in the computation. 
+            Thus the paper has used a LDPC decoder as the example.
 
-			\item 
+			\item \textit{LDPC decoder} LDPC is a very efficient coding method that has been applied in Wifi standard.
+            The basic idea is to multiply the info that needs to be coded with a polarity check matrix to form the coded info.
+            The circuit is very easy to design, as it just consists of an adder and multiplication and a feedback loop.
+            The decoding part is using possibility decoding, so it will involve a little programming.
+            I think LDPC decoder can be a small project with the matlab decoding.
+
+            \item \textit{Time-to-digital} Use a counter to count how many clock cycles have passed to measure the time that has passed.
+            And this value is converted to a digital representation. 
+            TDC requires highly accurate clock in order to achieve correct time to digital conversion.
+            The fine measurements have not been read in this review. \textbf{Sept 3, 2004}
+
+            \item \textit{Basic idea} The info that needs to be coded will be go into a DTC and converted to time info. 
+            It will than going through a special designed LDPC decoder in which basic operations have been done in the analog domain.
+            And then convert the info to the digital domain. 
+            This wil reduce energy consumption, because all info have been done in the analog domain.
+
+            \item \textit{Critics} The testbench is only for the LDPC decoder, for some other circuit it might not need such amount of clock signal transition.
+            From a personal point of view, it is strongly recommanded for other circuit for testing. 
+            It is a perfect idea for applying analog computional circuit to digital domain.
+            But overhead might be a problem in other circuits, especially for the DTC and TDC.
 
         \end{itemize}
 
