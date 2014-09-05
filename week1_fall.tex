@@ -18,7 +18,7 @@
 
 \rule[-0.1cm]{7.5in}{0.01cm}\\
 \\
-\noindent \textbf{Sept 3,2004}
+\noindent \textbf{Sept 3,2014}
 \textit{A 10.4pJ/b (32,8) LDPC Decoder with Time-Domain Analog and Digital Mixed-Signal Processing}
 \indent		\begin{itemize}
 			\item \textit{Main motivation}  Most of the analog computation circuits have a much higher efficiency in computational operation.
@@ -49,7 +49,7 @@
         \end{itemize}
 
 
-\noindent \textbf{Sept 4,2004}
+\noindent \textbf{Sept 4,2014}
 \textit{Self-Super-Cutoff Power Gating with State Retention on a 0.3V 0.29fJ/Cycle/Gate 32b RISC Core in 0.13um}
 \indent		\begin{itemize}
             \item \textit{Main Motivation} The paper proposed an idea to clamp the leakage power under super low supply voltage.
@@ -71,4 +71,30 @@
             \item \textit{Critics} 
             The question is that when the system should have a stand-by state so that it can save more energy.
 
+        \end{itemize}
+
+\noindent \textbf{Sept 5,2014}
+\textit{Low Power 1G Razor FIR Accelerator with Time borrowing tracking pipeline and approximate error correction}
+\indent		\begin{itemize}
+
+            \item \textit{Main Motivation} It's Razor, you know it.
+            This time these guys are thinking about how to reduce the overhead compared to the ANT circuits.
+            They want to demo it on a DSP chip.
+            They claim that they can correct the error on a algorithm-level.
+
+            \item \textit{ANT} two papers about Antinoise noise tolerance circuits \textbf{not looking into it, but sounds interesting, Sept 5,2014}\\
+            one, A Voltage Overscaled low-power digital filter IC\\
+            two, low power and error resilient PN code Acquisition filter via statistical error compensation\\
+            I mean, we should have published this thing faster than these UIUC guys.
+
+            \item \textit{main idea} Still, it is using the RZFF to detect errors and correct them. 
+            This time it use a FIFO to do the linear prediction in order to predict the correction in order to achieve a higher efficiency in improving accuracy.
+            
+            \item \textit{Critics}   I think the error detection can be implement with cirtain linear prediction.
+            Because this is the a FIR, of course, the correlation between the stream of bits should be much stronger.
+            Thus, I think, prediction can be applied to both detection and correction.
+            However, applying to detection might have to pay a higher price in cost. 
+
+        \end{itemize}
 \end{document}
+
