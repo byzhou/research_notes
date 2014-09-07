@@ -18,11 +18,35 @@
 
 \rule[-0.1cm]{7.5in}{0.01cm}\\
 \\
-\noindent \textbf{Sept 3,2014}
-\textit{title}
+\noindent \textbf{Sept 6,2014}
+\textit{Wide I/O with 4096b TSVs Through an active silicon interposer with in-place waveform capturing}
 \indent		\begin{itemize}
+            \item \textit{main motivation} The reason why 3D stacking is not applicable towards the massive production is that TSV is to expensive for massive production.
+            The interposer is active, it can be controlled actively through the control. 
+            The main point is to use the interposer to detect the waveform throught the TSV in order to build up a test agent to test the communication between different layers.
+            \item \textit{main idea} The idea is that the chip needs massive amount of veritical connections.
+            The silicon interposers in the stack provide pitch in horizontal and veritical channels for the accomodating TSVs and uBunmps.
+            In the paper, the author states well about how the chip is going to test and describe the testing agent function's behavior.
+            \item \textit{critcs} The BIST is through the traditional design and most of the ideas are to modify the current idea into an interposer.
+            Personally, I think it is a good paper to present the idea to work in the future, but the application for the 3D is very limited.
+        \end{itemize}
 
-            \item \textit{main idea}
+\noindent \textbf{Sept 7,2014}
+\textit{An 8MHz 75uA/MHz Zero leakage non-volatile logic based cortex mo MCU Soc exhibiting 100percent digital state retention at vdd=0}
+\indent		\begin{itemize}
+            \item \textit{main motivation} 
+                TI proposed an idea to use the logic based memory which is also non-volatile.
+                The system also reduces the wake up time when the vdd starts to power up from 0 voltage.
+               
+            \item \textit{main idea} 
+                The idea is to use capacitor to store the information.
+                The best part of the paper is that it use the control signal to control the writing operation towards the NV cells.
+                The effective driver will accelerate the read and write time.
+                
+            \item \textit{Critics}
+                The price pay to the area is enormouse. 
+                The entire on cell has been increased into several capacitors.
+                I did not lookinto this paper, but I think it is a good paper to start to understand fast read and write to NV cells. 
         \end{itemize}
 \end{document}
 
