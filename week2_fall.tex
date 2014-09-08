@@ -48,5 +48,29 @@
                 The entire on cell has been increased into several capacitors.
                 I did not lookinto this paper, but I think it is a good paper to start to understand fast read and write to NV cells. 
         \end{itemize}
+
+\noindent \textbf{Sept 8,2014}
+\textit{A High Performance eleiptic curve cryptographic processor over GF(p) with SPA Resistance}
+\indent		\begin{itemize}
+
+            \item \textit{SPA} Simple Power Analysis. It is related to the security problem of the hardware.\textbf{SPA attacks}
+
+            \item \textit{Montgomery modular multiplication} It is an algorithm that proves to be much more efficient after several hundreds of bits.\textbf{interesting algorithm}
+            
+            \item \textit{eleiptic curve crytographic system} It is another cryptographic systems as an alternative towards RSA system. It can achieve 160 bits security as RSA can do
+                in 1024 bit. Personally, I support to use the state of art cryptology for the hardware securty testbench. Once again, the cryptology involves the finite field study.
+                Thus, I think, it is very important to read through the finite field study.
+
+            \item \textit{main motivation} SPA has presented a great threat for hardware devices of public cryptosystems. By analyzing the power consumption, it is easy to detect
+                the private key's value. That is why the paper proposes a better way to counter SPA. The Montgomery modular multiplication is used for high speed modular computation, which
+                is needed in encryptography.
+
+            \item \textit{Basic idea} The paper is about use the ECCS to build a system that can counter SPA. The idea is to build it.
+
+            \item \textit{Critics} I do not know much about the security part. But I am sure there should be a way to breach it. Anyway, it is good way to start looking into the security
+                problems. Understanding the public keys and private keys.
+
+            \end{itemize}
+
 \end{document}
 
