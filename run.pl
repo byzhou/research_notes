@@ -50,7 +50,7 @@ while(@ARGV){
     if ($ARGV[0] eq "-p") {
         $cmd = "cd \.\.\/latex\/ \&\& \.\/autocommit \&\& cd \-";
         system ($cmd);
-        print "All the unnessary files have been removed\.\n";
+        print "All the files have been push to the repo\.\n";
         next;
     }
 
