@@ -2,8 +2,9 @@
 
 use File::Basename;
 
-$outdir = ".";
+#This is the default tex file path. It is advised to change this every week.
 $texfile = "\.\.\/latex\/week2_fall\.tex";
+#Default set is doing some bullshit. Don't care about it.
 $cmd = "pwd\n";
 
 #help text for unexpected situations
