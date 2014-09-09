@@ -42,7 +42,7 @@ while(@ARGV){
     }
     
     if ($ARGV[0] eq "-rm") {
-        $cmd = "rm \*\.aux \*\.log ";
+        $cmd = "rm \*\.aux \*\.log \*\.pdf ";
         system ($cmd);
         print "All the unnessary files have been removed\.\n";
         next;

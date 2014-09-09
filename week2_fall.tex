@@ -72,5 +72,31 @@
 
             \end{itemize}
 
+\noindent \textbf{Sept 9,2014}
+\textit{A 65 nm 39GOPS/W 24-Core Processor with 11Tb/s/W Packet-Controlled Circuit-Switched Double-layer Network-on-chip and heterogeneous execution array}
+\indent		\begin{itemize}
+            \item \textit{Main motivation} The processor has been organized in 2D mesh.
+            Each cluster contains its own VCO, which confused me that how the clock can be synchronized.
+            The system contains aggressive clock gating. The cores are the same, but one has reconfigurable arrays.
+
+            \item \textit{Basic idea} The idea of the paper is to use the packet switching to control circuit switching.
+            Circuit switching is for a higher energy efficiency.
+            The packet switching is extremely efficient in the small amount of data. \textbf{doubt}
+            The circuit switching has a higher efficiency in energy saving.\\
+
+            The processor has used x-y dimension ordered routing algorithm.\textbf{place and route algorithm}
+            The clock signal has been transmitted with the data bits so that synchronization has been achieved.
+            The data and clock will be resynchronized after several nodes.
+            These guys have set up a reconfigurable parts for flexible connections and configurable units.
+            These units basic for re-routing to some special functional units for some complex computation.
+
+            \item \textit{critics} Awsome idea on the core-to-core communication for the circuit level.
+            The processor did not measure IPC for the efficiency of the execution.
+            I guess it is not good, because the architecture is pretty simple.
+            It is using RISC for the main core.
+
+
+
+            \end{itemize}
 \end{document}
 
