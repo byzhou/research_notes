@@ -95,7 +95,74 @@
             I guess it is not good, because the architecture is pretty simple.
             It is using RISC for the main core.
 
+            \end{itemize}
 
+\noindent \textbf{class notes, Sept 9, 2014}
+\textit{PCB project}
+\indent		\begin{itemize}
+
+            \item   file $>$ new $>$ project $>$ PCB project
+            \item   file $>$ new $>$ libary $>$ schematic 
+            \item   Goes to digikey and find the component that you need. Pick up the library component first.
+                    In the end of the datasheet, we can see the schematic.
+            \item   Tools $>$  IPC Footprint Wizard
+            \item   package overall dimension. Sometimes it needs to specify the max and min dimension. SOT23 on the first page on the datasheet.
+                    Pick the SOT23 so that you can sold it easily.
+            \item   Wizard will goes through some parameter that should be default. 
+            \item   Footprint Dimensions. It will have pad dimension that we can make it a little comfortable to do it.
+            \item   Put it in the library.
+
+            \item   Purple means the exposed metal layer. Red means hidden metal layers. Blue means middle. Overlay layer means notes.
+                    Top solder and bottom solder for sold.
+            \item   Two layers of PCB.
+
+            \item   Create a non-std footprint.
+            \item   PCB library. It can show the form.
+            \item   Add another awesome item.
+            \item   Use the button q. It can change from inch to mm or mm to inch.
+            \item   The pad can goes through and goes to a bottom.
+            \item   Double click the pad. The hole should be 130 100.
+            \item   In the Layer option, you can change the pads through the board. The via does not appear in the library.
+            \item   x for fliping, space for rotating.
+            \item   Library Component Properties.Default Designator is the name of the components. You are going to write U?. Model with schematics.
+            \item   In the schematics, place port. Use the tab key, it will come up with the proporties of pins. Use the \ for the name of the
+                    port.
+            \item   Source document. Make a new schametics. Place parts that we created in the library.
+            \item   Place wires. The cross will become a large x to indicate the connection.
+            \item   Place labels. Put the value of the components.
+            \item   PgUp and PgDown are zoom in or zoome
+            \item   Tools $>$ take schametics. It needs individual names. Annotate schametics.
+            \item   Right click on something and Update schematic and the footprint name will be consistant with the updated library.
+            \item   There is a global ground to connect all the stuff.
+            \item   File $>$ new PCB
+            \item   Grid can be changed.
+            \item   Make two boards.
+            \item   In mechanical 1, I can draw the boundaries.
+            \item   Design $>$ Boundary 
+            \item   Design $>$ Import blabla design
+            \item   Top level to down. 
+            \item   Routing part from the top to down. Interactive connecting.
+            \item   Design $>$ layer stack manager.
+            \item   Tools $>$ Design Rools Check
+            \item   Garber setup. Send this to fab.
+            \item   NC Drill file. This is for holes. Use the binary file.
+            \item   Bill material.
+
+            \end{itemize}
+
+\noindent \textbf{ Sept 10, 2014}
+\textit{Energy-Efficient Clocking Based on Resonant Switching for Low-Power Computation}
+\indent		\begin{itemize}
+
+            \item \textit{Landauer's principle concerning irreversible logic} There is a minimum energy dissipation of $k_{B}Tlog(2)$ when information is erased.
+            \item \textit{EERS} Energy recovery resonant switching.    
+        
+            \item \textit{main motivation} Reducing the energy consumption by using resonant for clocking signal.
+
+            \item \textit{main idea} Generate a clock signal with very low cost of energy by implementing the resonant circuit. 
+
+            \item \textit {critics} The frequency of the circuit is going to be low.
+            The use of inductor in the IC is very costly. I believe the author did not tape out the chip.
 
             \end{itemize}
 \end{document}
