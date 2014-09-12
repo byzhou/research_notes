@@ -176,8 +176,22 @@
             \end{itemize}
 
 \noindent \textbf{ Sept 12, 2014}
-\textit{new paper}
+\textit{A 25MHz 7uW/MHz Ultra-Low-Voltage Microcontroller SoC in 65nm LP/GP CMOS for Low-Carbon Wireless Sensor Nodes}
 \indent		\begin{itemize}
-            \item \textit{main motivation} The circuit needs to work under a much lower supply voltage in order to save energy. 
+            \item \textit{main motivation} Minimizing the carbon footprint of each node is paramount for sustainable perspective.
+            
+            \item \textit{main idea} Build a chip. There is one interesting thing that it does for th espurious transitions on the level shifters.
+            It uses a glitch-masking gate in the cache for the addressing data.
+            The PVT caused timing errors detection is implemented with a critical path replica ring osc.
+            Forward body biased at ULV has been implemented in active mode.
+            In sleep mode, the body biaed recovers to zero for low energy cost.
+            Clock skew easily jeopardizeds the hold time, so that the system uses the clock tree to buffer the clock.
+            The conventional ultra low voltage design does not have this design.
+            The author has used the idea of having this design.
+
+            \item \textit{cirtics}
+            Basically, there is no innovative part that is significant. 
+            The best part I see is the ULV clock tree design and the cache mask design for mitigate the glitches.
+            \end{itemize} 
 \end{document}
 
