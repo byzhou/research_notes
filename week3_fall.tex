@@ -1,7 +1,7 @@
 \documentclass[]{article}
 \usepackage{graphicx}
 %coffee stain package
-\usepackage{../../latex_sty/coffee3}
+\usepackage{coffee3}
 \usepackage{tikz}
 \usepackage{verbatim}
 \usetikzlibrary{arrows,shapes}
@@ -20,7 +20,8 @@
              Email: bobzhou@bu.edu, Phone: 617-678-8480
 \end{itemize}
 
-\cofeA{0.75}{0.5}{90}
+%\cofeA{0.75}{0.5}{90}
+%This is used for adding a coffee stain.
 \rule[-0.1cm]{7.5in}{0.01cm}\\
 \\
 \noindent \textbf{Sept 15,2014}
@@ -38,6 +39,7 @@
             \item \textit{critics} The idea for evenly distributes the priority is to use the Most Recent used gets the
             the highest priority. In my opinion, there can be better evenly distributed priority algorithm to provide a
             better performance. But in this case, low energy consumption is the priority.
+
         \end{itemize}
 
 \noindent \textbf{Sept 16,2014}
@@ -56,5 +58,17 @@
             \item \textit{critics} This idea can only expands to 4 core. I don't believe it can be expands to larger scale.
         \end{itemize}
 
+\noindent \textbf{Sept 17,2014}
+\textit{A 2.05GVertices 151mW Lighting Accelerator for 3D Graphics Vertex and Pixel Shading in 32nm CMOS}
+\indent     \begin{itemize}
+            \item \textit{main motivation} Reduce energy and have higher performance. The author proposes that hardware
+            accelerator is important for performance improvement.
+            \item \textit{main idea} The author proposes to complete the calculation on the log domain. And then use FPWL
+            (fixed point piecewise linear approximation log circuit). The logrithm is approximated by 5 linear intervals.
+            The intervals approximation introduces errors to the system but this is for graphics application, so the 
+            efficiency of power is priority.
+            \item \textit{critics} It is a great idea for the graphics applications. If the error control can be less, it
+            may be applied to the GPP.
+        \end{itemize}
 \end{document}
 
