@@ -8,7 +8,7 @@
 \pagestyle{empty}
 {\large\textbf{Research Notes}}
 \begin{itemize}
-    \item[*] Created on Sept 6, 2014
+    \item[*] Created on Sept 21, 2014
     \item[*] Modified on \today
     \item[*] Author info: Boyou Zhou\\
              8 St Mary's St, PHO 340, Boston, MA 02215\\
@@ -19,10 +19,22 @@
 \rule[-0.1cm]{7.5in}{0.01cm}\\
 \\
 \noindent \textbf{Sept 3,2014}
-\textit{title}
+\textit{An Efficient Real Time Fault Detection and Tolerance Framework Validated on the Intel SCC Processor}
 \indent		\begin{itemize}
+            \item \textit{main motivation} Current fault detection techniques are not based on the time on the fly.
+            In terms of computational resources using, it is more efficient to do it on the run. 
 
-            \item \textit{main idea}
+            \item \textit{main idea} This paper emphasizes on the real time process networks. The author proposes the
+            idea to create a buffer and by measuring the size of the buffer to have the fault detection.
+            Error detection is based on building up a replica of the existing network.
+            When the error has been detected, the buffer will be full and blocking the incoming process, and as a result
+            the selector has been flagged as blocker.
+
+            \item \textit{Kahn Process Network} the process network is independent of the timing of the network
+
+            \item \textit{critics} The proposed idea has paid to much price for the error detection. The entire replica
+            of a process flow costs too muck.
+
         \end{itemize}
 \end{document}
 
