@@ -1,0 +1,54 @@
+\documentclass[]{article}
+\usepackage{graphicx}
+
+\parindent=0pt
+\usepackage[margin=0.5in]{geometry}
+
+\begin{document}
+\pagestyle{empty}
+{\large\textbf{Research Notes}}
+\begin{itemize}
+    \item[*] Created on Sept 29, 2014
+    \item[*] Modified on \today
+    \item[*] Author info: Boyou Zhou\\
+             8 St Mary's St, PHO 340, Boston, MA 02215\\
+             Email: bobzhou@bu.edu, Phone: 617-678-8480
+\end{itemize}
+
+
+\rule[-0.1cm]{7.5in}{0.01cm}\\
+\\
+\noindent \textbf{Sept 29,2014}
+\textit{proceedings on hardware security}
+\indent		\begin{itemize}
+
+            \item \textit{State-of-art defenses} 
+                \begin{itemize}
+
+                    \item \textit{invasive} precies measurement throughout all the gates, in order to check
+                    how the gates are arranged. It is too expensive for small companies.
+
+                    \item \textit{non-invasive} External parametric and functional IC testing. Such corresponding
+                    metrics are delay, quiescent leakage, and dynamic leakage.
+                    Example testing includes transient power analysis, path-delay meausurements, gate level
+                    characterization, thermal profiling, or combination.
+
+                \end{itemize}
+        \end{itemize}
+
+\noindent \textbf{Sept 30,2014}
+\textit{Low Power Memristor-based ReRAM Design with Error Correcting Code }
+\indent		\begin{itemize}
+            \item \textit{before everything} I feel very confused is that people do not care about ecc in the 
+            digital calculation circuits. I tried to find out how people have done similar work, but the result
+            is none.
+            \item \textit{main motivation} There are traditional error correcting code for the conventional design
+            of DRAM. The author has proposed the idea to use the ECC for the memristor.
+            The main idea is to use the ecc for the memristor-based memory. The author check how many bits for ecc
+            is the most energy efficiency.
+
+            \item \textit{critics} Not very innovative, it's just move all the schemes in the traditional design 
+            into the memristor scheme.
+        \end{itemize}
+\end{document}
+
