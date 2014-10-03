@@ -87,6 +87,21 @@
                             information. In the Diffie-Hellman key exchange scheme, Alice and Bob can decrypt independently 
                             the cyphertext with both their own private key and the other one's public key.
                         \end{itemize}
+                \item AES cryptography system\\
+
+                    It is based on a substitution-permutation network. It is both fast in software and hardware. It operates as
+                    cycles of repetition of 128, 192, 256 bit blocks. It utilize a key expansion method, Rijndael's key schedule.
+                    AES requires a seperate 128-bit round key block for each round plus one more. The high level of the algorithm
+                    can be summarized as the repetition of subbytes, shiftRows, mixColumns and addroundkey.
+
+                    \begin{itemize}
+                        \item \textit{subbytes} Substitute the text with another combination of text.
+                        \textit{substitution}
+                        \item \textit{shiftrows} For each line, shift them for one column left.
+                        \item \textit{mixcolumns} Use exclusive-or to mix the plaintext with the pseudo-random codes.
+                        \textit{diffusion}
+                    \end{itemize}
+                    
                 \end{itemize}
 
             \end{itemize}
