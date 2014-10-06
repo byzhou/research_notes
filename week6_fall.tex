@@ -1,0 +1,49 @@
+\documentclass[]{article}
+\usepackage{graphicx}
+
+\parindent=0pt
+\usepackage[margin=0.5in]{geometry}
+
+\begin{document}
+\pagestyle{empty}
+{\large\textbf{Research Notes}}
+\begin{itemize}
+    \item[*] Created on Oct 5, 2014
+    \item[*] Modified on \today
+    \item[*] Author info: Boyou Zhou\\
+             8 St Mary's St, PHO 340, Boston, MA 02215\\
+             Email: bobzhou@bu.edu, Phone: 617-678-8480
+\end{itemize}
+
+
+\rule[-0.1cm]{7.5in}{0.01cm}\\
+\\
+\noindent \textbf{Oct 5,2014}
+\textit{PUFatt: Embedded Platform Attestation Based on Novel Processor-Based PUFs}
+\indent		\begin{itemize}
+            \item \textit{Attestation} Built-in technology against malicious codes.
+
+            \item \textit{Prover and Verifier} Platform to be evaluated and another platform
+            to demonstrate that prover is in a known and trustworthy state.
+
+            \item \textit{PUF} Physically Unclonable Functions
+
+            \item \textit{Challenge and response} To each given input, there is a unique hard-
+            ware specific output.
+
+            \item \textit{CRP} Chaellenge and Response Pairs
+
+            \item \textit{Arbiter} Two inputs gate. If one signal is faster then the other, output
+            is one, vice versa.
+
+            \item \textit{Main idea} The idea is to use process variation to create a signauture
+            as the difference between to identical circuits.  The info is stored with obfuscation 
+            network inside memory. The CRP for security check is verified by machine learn scheme
+            based on the pre-stored info.
+
+            \item \textit{critics} In the side channel attack, the author did not specificly explain
+            what kind of side channel attack he is talking about. I believe that side channel attack
+            can be acheived by bypassing the obsfucation part.
+        \end{itemize}
+\end{document}
+

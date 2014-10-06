@@ -3,7 +3,7 @@
 use File::Basename;
 
 #This is the default tex file path. It is advised to change this every week.
-$texfile = "\.\.\/latex\/week5_fall\.tex";
+$texfile = "\.\.\/latex\/week6_fall\.tex";
 #Default set is doing some bullshit. Don't care about it.
 $cmd = "pwd\n";
 
