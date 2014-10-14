@@ -3,7 +3,7 @@
 %       *   File Name : week7_fall.tex
 %       *   Purpose :
 %       *   Creation Date : 10-13-2014
-%       *   Last Modified : Mon 13 Oct 2014 02:57:08 PM EDT
+%       *   Last Modified : Tue 14 Oct 2014 12:04:23 PM EDT
 %       *   Created By : Boyou Zhou
 %    
 %    The MIT License (MIT)
@@ -40,7 +40,7 @@
 \pagestyle{empty}
 {\large\textbf{Research Notes}}
 \begin{itemize}
-    \item[*] Created on Sept 6, 2014
+    \item[*] Created on Oct 13, 2014
     \item[*] Modified on \today
     \item[*] Author info: Boyou Zhou\\
              8 St Mary's St, PHO 340, Boston, MA 02215\\
@@ -50,11 +50,33 @@
 
 \rule[-0.1cm]{7.5in}{0.01cm}\\
 \\
-\noindent \textbf{Sept 3,2014}
-\textit{title}
+\noindent \textbf{Oct 13,2014}
+\textit{Trojan Side-Channels: Lightweight Hardware trojans through Side-Channel Engineering}
 \indent		\begin{itemize}
 
-            \item \textit{main idea}
+            \item \textit{side channel analysis} 
+                \begin{itemize}
+                    \item \textit{Power consumption}
+                    \item \textit{electromagnetic radiation}
+                    \item \textit{timing behavior}
+                    \item \textit{sound waves}
+                \end{itemize}
+            \item \textit{main idea} Design a hardware trojan that is undetectable. The total area is very
+                    small and the author used a 1$\Omega$ serial current sensing to probe the power consumption
+                    to detect the leakage. In the leakage pin, the author use 8 flipflops connecting to a single
+                    XOR gate to mimic huge capacitance.               
+            
+            \item \textit{Detectability} 
+                \begin{itemize}
+                    \item \textit{Size}
+                    \item \textit{Side-Channel Leakage}
+                    \item \textit{Trigger} Avoid extensive functional testing
+                \end{itemize}
+
         \end{itemize}
+
+\noindent \textbf{Oct 14,2014}
+\textit{Power Analysis Performance}
+\indent		\begin{itemize}
 \end{document}
 
