@@ -3,7 +3,7 @@
 %       *   File Name : week7_fall.tex
 %       *   Purpose :
 %       *   Creation Date : 10-13-2014
-%       *   Last Modified : Thu 16 Oct 2014 12:00:06 PM EDT
+%       *   Last Modified : Mon 20 Oct 2014 11:23:30 AM EDT
 %       *   Created By : Boyou Zhou
 %    
 %    The MIT License (MIT)
@@ -40,7 +40,7 @@
 \pagestyle{empty}
 {\large\textbf{Research Notes}}
 \begin{itemize}
-    \item[*] Created on Oct 13, 2014
+    \item[*] Created on Oct 20, 2014
     \item[*] Modified on \today
     \item[*] Author info: Boyou Zhou\\
              8 St Mary's St, PHO 340, Boston, MA 02215\\
@@ -50,40 +50,23 @@
 
 \rule[-0.1cm]{7.5in}{0.01cm}\\
 \\
-\noindent \textbf{Oct 13,2014}
-\textit{Trojan Side-Channels: Lightweight Hardware trojans through Side-Channel Engineering}
+\noindent \textbf{Oct 20,2014}
+\textit{Hardware Trojan Detection through Golden Chip-Free Statistical Side-Channel Fingerprinting}
 \indent		\begin{itemize}
+                \item \textit{Utilize the Process Control Monitors} The monitors exists on the area
+                        in-between die or on the die for process characterization.
+                \item \textit{Non-linear Regression Models} The way to learn side-channel fingerprints
+                        using Monte-Carlo simulation.
+                \item \textit{Tail Modeling Methods} Enhance classification boundary.
+                \item \textit{Critics} Use math models to enhance detection rate but without any 
+                        real chips.
+                \item \textit{main idea} Establish a systematic way to build up a multi-dimension
+                        space area, where it is very easy to define a hyper-space region, which you
+                        can tell which point is trojan free. All the axes are the side-channel factors.
+                \item \textbf{our work concern} The HTs are added by reverse engineering. The problem 
+                        is that if we add antennas, they will be discovered in the reverse engineered
+                        part. And they are easily modified by adding those antenna cells.
 
-            \item \textit{side channel analysis} 
-                \begin{itemize}
-                    \item \textit{Power consumption}
-                    \item \textit{electromagnetic radiation}
-                    \item \textit{timing behavior}
-                    \item \textit{sound waves}
-                \end{itemize}
-            \item \textit{main idea} Design a hardware trojan that is undetectable. The total area is very
-                    small and the author used a 1$\Omega$ serial current sensing to probe the power consumption
-                    to detect the leakage. In the leakage pin, the author use 8 flipflops connecting to a single
-                    XOR gate to mimic huge capacitance.               
-            
-            \item \textit{Detectability} 
-                \begin{itemize}
-                    \item \textit{Size}
-                    \item \textit{Side-Channel Leakage}
-                    \item \textit{Trigger} Avoid extensive functional testing
-                \end{itemize}
-
-        \end{itemize}
-
-\noindent \textbf{Oct 14,2014}
-\textit{Power Analysis Performance}
-\indent		\begin{itemize}
-            \end{itemize}
-
-
-\noindent \textbf{Oct 16,2014}
-\textit{}
-\indent		\begin{itemize}
             \end{itemize}
 \end{document}
 
