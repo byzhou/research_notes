@@ -3,7 +3,7 @@
 %       *   File Name : week7_fall.tex
 %       *   Purpose :
 %       *   Creation Date : 10-13-2014
-%       *   Last Modified : Tue 21 Oct 2014 07:33:05 PM EDT
+%       *   Last Modified : Wed 22 Oct 2014 01:55:50 PM EDT
 %       *   Created By : Boyou Zhou
 %    
 %    The MIT License (MIT)
@@ -77,8 +77,8 @@
                 \item \textit{export gds in encounter} streamout yourFileName.gds
                 \item \textit{import gds file in virtuoso} strmin -library AES\_trojan -strmFile /your
                         /path/of/the/gds/file/file.gds
-                \item \textit{add filler} addFiller -cell FILLCELL\_X1 FILLCELL\_X4 FILLCELL\_X8 -prefix FILL
-                \item \textit{delete filler} deleteFiller -cell FILLCELL\_X1 FILLCELL\_X4 FILLCELL\_X8 -prefix FILL
+                \item \textit{add filler} addFiller -cell FILLCELL\_X1 FILLCELL\_X2 FILLCELL\_X4 FILLCELL\_X8 FILLCELL\_X16 FILLCELL\_X32 -prefix FILL
+                \item \textit{delete filler} deleteFiller -cell FILLCELL\_X1 FILLCELL\_X2 FILLCELL\_X4 FILLCELL\_X8 FILLCELL\_X16 FILLCELL\_X32 -prefix FILL
                 \item \textit{select a group of things} selectObjByProp Module <Name>Match<Trojan>
                 \item \textit{deleteModule} deleteModule Trojan
             \end{itemize}
