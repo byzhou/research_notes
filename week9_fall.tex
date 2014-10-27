@@ -1,0 +1,45 @@
+\documentclass[]{article}
+\usepackage{graphicx}
+
+\parindent=0pt
+\usepackage[margin=0.5in]{geometry}
+
+\begin{document}
+\pagestyle{empty}
+{\large\textbf{Research Notes}}
+\begin{itemize}
+    \item[*] Created on Oct 27, 2014
+    \item[*] Modified on \today
+    \item[*] Author info: Boyou Zhou\\
+             8 St Mary's St, PHO 340, Boston, MA 02215\\
+             Email: bobzhou@bu.edu, Phone: 617-678-8480
+\end{itemize}
+
+
+\rule[-0.1cm]{7.5in}{0.01cm}\\
+\\
+\noindent \textbf{Oct 27,2014}
+\textit{High-level Synthesis for Run-time Hardware Trojan Detection and
+Recovery}
+\indent		\begin{itemize}
+            \item \textit{main motivation} The author does not like the idea
+            with side channel analysis. The author propose the idea to detect
+            the trojan and then recover the chip to the normal state. 
+            \item \textit{IP core trojan insertion} Two funciton-equivalent
+            using IP cores from different vendors carrying the same trojan is
+            not very likely.  
+            \item \textit{NC RC} Normal Computation and Re-Computation
+            \item \textit{related work} NC and PC computation's inconsistancy
+            will be viewed as the insertion of harware trojan.
+            \item \textit{architecture asurance} It's like the Boeing747 using
+            three architectures to ensure the accuracy of computation.
+            \item \textit{ILP} The auther considers the cost problem as an
+            optimization problem. Pretty awesome they convert binary problem to
+            a linear optimization problem.
+            \item \textit{critics} Cost paid for getting two identical IP
+            cores.
+            \item \textit{high-level synthesis} GAUT, a high level synthesis
+            tool.
+        \end{itemize}
+\end{document}
+
