@@ -1,5 +1,6 @@
 \documentclass[]{article}
 \usepackage{graphicx}
+\usepackage{amsmath}
 
 \parindent=0pt
 \usepackage[margin=0.5in]{geometry}
@@ -61,10 +62,56 @@ Recovery}
             \item \textit{critics} They added to much input cap due to the
             added flipflop.
        		\end{itemize}
-       		\begin{itemize}
+
+\noindent \textbf{Oct 28,2014}
+\textit{EC535 lab note}
+\indent		\begin{itemize}
                 \item \textit{I2c position gumstix} \\
                 nc nc power gnd
                 nc gpio17 nc nc
        		\end{itemize}
+
+\noindent \textbf{Oct 29,2014}
+\textit{PageRank}
+\indent		\begin{itemize}
+                \item \textit{assumption} How important a website is depends on
+                how many links point towards it. The more being pointed, the
+                more important it is.
+                \item \textit{example} There is a small universe of examples,
+                A, B, C, and D. At first, all the PR value for these four are
+                evenly distributed as $0.25$. If A, B, C point at D, then they
+                dump all their value to D, as D is $0.75$. It one node is
+                pointing at multiple nodes, then the possibility will be evenly
+                distributed. As A points at B and C, then each dumped
+                possibility will be $0.125$. However, one PR value is not only
+                depends on the dumped possibility but also being affected by
+                the dump factor.
+                \begin{equation}
+                    PR(p_{i}) = \frac{1-d}{N} + d\sum\limits_{(p_{j}) \in
+                    M(p_{i})} \frac{PR(p_{j})}{L(p_{j})}
+                \end{equation}
+                \item \textit{critics} The \textit{farm links} will alter the
+                importance of a group of websites. There must be more fraud
+                website detections for those websites.
+                \item \textit{development} Penguin and Panda
+                    \begin{itemize}
+                        \item \textit{Penguin} It is aiming at detection of
+                        cross language affection upon the eigenvalue, the
+                        dumping factor.
+                        \item \textit{panda} It is proposed to get rid of the
+                        low quality websites.
+                        \item \textit{link farm detection} This is a trade
+                        secret of the company.
+                    \end{itemize}
+            \end{itemize}
+
+\noindent \textbf{Oct 30,2014}
+\textit{On Application of One-class SVM to Reverse Engineering-Based Hardware
+Trojan Detection}
+\indent		\begin{itemize}
+
+                \item \textit{SVM} Support Vector Machine
+                \item \textit{main motivation}
+            \end{itemize}
 \end{document}
 
