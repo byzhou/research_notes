@@ -3,7 +3,7 @@
 use File::Basename;
 
 #This is the default tex file path. It is advised to change this every week.
-$texfile = "\.\.\/latex\/week10_fall\.tex";
+$texfile = "\.\.\/latex\/week3_spring\.tex";
 #Default set is doing some bullshit. Don't care about it.
 $cmd = "pwd\n";
 
@@ -31,6 +31,8 @@ Usage: It is used for observing the latex notes. Th series of commands will hand
     [-p] Push all the tex file to github.
     [-rm] All the unncessary files will be moved.
     [-v] Similar to -c but -v is the command that shows the pdf file after the compilation.
+    [-l] List all the tex files.
+    [-n] Create a new file from the existing template.
 
 EOF
 
@@ -107,6 +109,28 @@ while(@ARGV){
         } 
         next;
     }
+
+    if ($ARGV[0] eq "-l"){
+        print "All the tex files are listed below...\n";
+        $cmd = "cd ../latex/ && ls -al -color *.tex && cd -";
+        system ($cmd);
+        next;
+    }
+
+    if ($ARGV[0] eq "-n"){
+        print "Initializing a new file...\n";
+        if ($ARGV[1] eq ""){
+            print "Please specify the filename..\n";
+        } else { 
+            $fileName = $ARGV[1] ;
+            $cmd = "cd ../latex/ && cp template.tex `$fileName` && cd - 
+                && ln -svf ../latex/`$fileName` current.tex";
+            system ($cmd);
+        }
+        next;
+    }
+
+
 } continue {
     shift (@ARGV);
 }
