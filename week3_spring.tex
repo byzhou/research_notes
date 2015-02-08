@@ -8,7 +8,7 @@
 \pagestyle{empty}
 {\large\textbf{Research Notes}}
 \begin{itemize}
-    \item[*] Created on Sept 6, 2014
+    \item[*] Created on Feb 8, 2015
     \item[*] Modified on \today
     \item[*] Author info: Boyou Zhou\\
              8 St Mary's St, PHO 340, Boston, MA 02215\\
@@ -18,11 +18,34 @@
 
 \rule[-0.1cm]{7.5in}{0.01cm}\\
 \\
-\noindent \textbf{Sept 3,2014}
-\textit{title}
+\noindent \textbf{Feb 8,2014}
+\textit{Invasive PUF Analysis}
 \indent		\begin{itemize}
+            \item \textit{main motivation}
+            The paper is similar to the work that we have done. They are using
+            the laser as the stimulation and try to detect the HT by testing the
+            response. The difference is that they are focusing on the material
+            level and we are working on the circuit level. They also try to find
+            a way to have photonic stimulation but with electric response, which
+            I think that it is a cool idea that can be explored in the future.
 
             \item \textit{main idea}
+            The main work has been done in the area of SRAM PUF. The technique
+            has been divided into two part. One part is the
+            optical-stimulation-electric-response and the other is to use
+            optical technique to detect the stored info inside the SRAM.
+            
+            The most awesome part of this paper is the idea of OSER. Once the
+            laser has been applied on the gate, the gate can be turned on. With
+            this technique, the idea can be used in gate-by-gate testing.
+
+            \item \textit{critics}
+            The author has met some problems to apply the idea. The main issue
+            is that what we are dealing with is digital circuit. The shot
+            current will lead to noise ground that make it hard to detect the
+            electrical response. My first order idea to solve this idea is to
+            encode the stimulation. The electrical response must be processed in
+            digital region.
         \end{itemize}
 \end{document}
 
