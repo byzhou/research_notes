@@ -3,7 +3,8 @@
 use File::Basename;
 
 #This is the default tex file path. It is advised to change this every week.
-$texfile = "\.\.\/latex\/week3_spring\.tex";
+#$texfile = "\.\.\/latex\/week3_spring\.tex";
+$texfile = "current\.tex";
 #Default set is doing some bullshit. Don't care about it.
 $cmd = "pwd\n";
 
@@ -123,8 +124,7 @@ while(@ARGV){
             print "Please specify the filename..\n";
         } else { 
             $fileName = $ARGV[1] ;
-            $cmd = "cd ../latex/ && cp template.tex `$fileName` && cd - 
-                && ln -svf ../latex/`$fileName` current.tex";
+            $cmd = "cd ../latex/ && cp template.tex $fileName && cd - && ln -svf ../latex/$fileName current.tex";
             system ($cmd);
         }
         next;
