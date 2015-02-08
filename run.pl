@@ -34,6 +34,7 @@ Usage: It is used for observing the latex notes. Th series of commands will hand
     [-v] Similar to -c but -v is the command that shows the pdf file after the compilation.
     [-l] List all the tex files.
     [-n] Create a new file from the existing template.
+    [-w] Open the current tex file and edit it. (The default editor is vim)
 
 EOF
 
@@ -130,6 +131,12 @@ while(@ARGV){
         next;
     }
 
+    if ($ARGV[0] eq "-w"){
+        print "Opening the tex file...\n";
+        $cmd = "vim current.tex";
+        system ($cmd);
+        next;
+    }
 
 } continue {
     shift (@ARGV);
