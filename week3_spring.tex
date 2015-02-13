@@ -72,10 +72,25 @@
         \end{itemize}
 
 \noindent \textbf{Feb 13,2014}
-\textit{Improving the Quality of Delay-Based PUFs via Optical Proximity
-        Correction}
+\textit{FPGA IP protection by binding finite state machine to physical
+unclonable function}
 \indent     \begin{itemize}
-        \item \textit{main motivation}
+        \item \textit{main motivation} 
+            There are basicly three main ways of preventing IP cloning. The
+            first way is to use watermarking. But watermarking is a passive way
+            to solve the problem. It can not prevent people from cloning
+            actively. The second way is to lock the IP, which requires keys to
+            unlock it. The thing is that with side channel attacking, it is
+            possible to retrieve the keys and then cloning without notice. The
+            last method is using the PUF. PUF has an advantage of device
+            dependent. For different devices, the key is different.
+        \item \textit{main idea} Talks about how to use PUF to prevent IP
+            cloning. 
+        \item \textit{critics} The paper has not addressed the issue with
+            complete reverse-engineering of the entire chip. My point of view is
+            that if it is possible to use the bit-stream to reverse engineering
+            the entire chip and then it is impossible to prevent IP
+            counterfeiting.
         \end{itemize}
 \end{document}
 
