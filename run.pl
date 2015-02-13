@@ -1,6 +1,7 @@
 #!/usr/bin/perl
 
 use File::Basename;
+use Sys::Hostname;
 
 #This is the default tex file path. It is advised to change this every week.
 #$texfile = "\.\.\/latex\/week3_spring\.tex";
@@ -45,6 +46,12 @@ Usage: It is used for observing the latex notes. Th series of commands will hand
 
 EOF
 
+#time info
+$currentTime    = localtime() ;
+$userName       = getpwuid( $< ) ;
+$hostName       = hostname ;
+
+
 while(@ARGV){
 
     if ($ARGV[0] eq "-h" || $ARGV[0] eq "--help" || $ARGV[0] eq "-help"){
@@ -66,7 +73,7 @@ while(@ARGV){
         print << "EOF";
 
         ==================================================================
-        `whoami` @ `hostname` has made commits to the repo on `date`
+        $userName \@ $hostName on $currentTime \n
         ==================================================================
 
 EOF
