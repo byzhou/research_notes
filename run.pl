@@ -73,7 +73,7 @@ while(@ARGV){
         print << "EOF";
 
         ==================================================================
-        $userName \@ $hostName on $currentTime \n
+        $userName \@ $hostName on $currentTime 
         ==================================================================
 
 EOF
