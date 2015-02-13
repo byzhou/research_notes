@@ -18,6 +18,13 @@ EOF
 
 $help_text = << "EOF";
 
+ ____  _____ ____  _       ____  ____  _____     _______ _   _   _        _  _____ _______  __
+|  _ \| ____|  _ \| |     |  _ \|  _ \|_ _\ \   / / ____| \ | | | |      / \|_   _| ____\ \/ /
+| |_) |  _| | |_) | |     | | | | |_) || | \ \ / /|  _| |  \| | | |     / _ \ | | |  _|  \  / 
+|  __/| |___|  _ <| |___  | |_| |  _ < | |  \ V / | |___| |\  | | |___ / ___ \| | | |___ /  \ 
+|_|   |_____|_| \_\_____| |____/|_| \_\___|  \_/  |_____|_| \_| |_____/_/   \_\_| |_____/_/\_\
+
+
 Usage: It is used for observing the latex notes. Th series of commands will handl the notes into a 
        nice repo. It provides me a great opportunity to learn this language perl.
 
