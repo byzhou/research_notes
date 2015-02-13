@@ -63,6 +63,13 @@ while(@ARGV){
         $cmd = "cd \.\.\/latex\/ \&\& \.\/autocommit \&\& cd \-";
         system ($cmd);
         print "All the files have been push to the repo\.\n";
+        print << "EOF";
+
+        ==================================================================
+        `whoami` @ `hostname` has made commits to the repo on `date`
+        ==================================================================
+
+EOF
         next;
     }
 
@@ -132,7 +139,8 @@ while(@ARGV){
             print "Please specify the filename..\n";
         } else { 
             $fileName = $ARGV[1] ;
-            $cmd = "cd ../latex/ && cp template.tex $fileName && cd - && ln -svf ../latex/$fileName current.tex";
+            $cmd = "cd ../latex/ && cp template.tex $fileName && cd - && ln -svf
+            ../latex/$fileName current.tex";
             system ($cmd);
         }
         next;
