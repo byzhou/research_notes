@@ -39,5 +39,19 @@ Something more on \textit{FPGA IP protection by binding FSM to PUF}
             \item \textit{critics} This requires the complete trust of FPGA
                 vendor not involved in IP stealing.
         \end{itemize}
+
+\noindent \textbf{Feb 16,2014}
+\textit{Dynamic Intellectual Property Protection for Reconfigurable Devices}
+\indent		\begin{itemize}
+            \item \textit{main motivation} Most of the encryption of the FPGA IP
+            cores are protected by static keys. The idea is to build an
+            encryption system that are not based on public keys, but can only be
+            licensed by private keys.
+            \item \textit{main idea} So the author incorporates the
+            reconfigurable ability of the FPGA to make the keys that are based
+            on MAC.
+            \item \textit{critics} If the SI can reverse engineer the IP, all
+            the locking part can not work.
+        \end{itemize}
 \end{document}
 
