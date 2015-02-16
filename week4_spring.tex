@@ -1,0 +1,43 @@
+\documentclass[]{article}
+\usepackage{graphicx}
+
+\parindent=0pt
+\usepackage[margin=0.5in]{geometry}
+
+\begin{document}
+\pagestyle{empty}
+{\large\textbf{Research Notes}}
+\begin{itemize}
+    \item[*] Created on Feb 16, 2014
+    \item[*] Modified on \today
+    \item[*] Author info: Boyou Zhou\\
+             8 St Mary's St, PHO 340, Boston, MA 02215\\
+             Email: bobzhou@bu.edu, Phone: 617-678-8480
+\end{itemize}
+
+
+\rule[-0.1cm]{7.5in}{0.01cm}\\
+\\
+\noindent \textbf{Feb 16,2014}
+Something more on \textit{FPGA IP protection by binding FSM to PUF}
+\indent		\begin{itemize}
+            \item \textit{main motivation} The idea is to get rid of the TTY (
+            Trusted Third Party), or block cipher for key management and
+            exchange. Previous work have been done by [3] [4] [5] [6].
+            Conclusion on previous works of FPGA IP protection.
+                \begin{itemize}
+                \item \textit{encryption} Commercially available
+                    encryption-based techniques are limited to single large FPGA
+                    configuration. \textit{strange argument}
+                \item \textit{encryption-based licensing} Requires TTY.
+                \item \textit{HW-IP} binding methods use mechanisms in scured
+                    ROM or flash memory. They are vulnerable to side-channel
+                    attacks.
+                \end{itemize}
+            \item \textit{main idea} In the graph, it consists of core vendor,
+                FPGA vendor and system developer to generate the keys. 
+            \item \textit{critics} This requires the complete trust of FPGA
+                vendor not involved in IP stealing.
+        \end{itemize}
+\end{document}
+

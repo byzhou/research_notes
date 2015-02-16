@@ -5,7 +5,7 @@ use Sys::Hostname;
 
 #This is the default tex file path. It is advised to change this every week.
 #$texfile = "\.\.\/latex\/week3_spring\.tex";
-$texfile = "current\.tex";
+$texfile = "week4\_spring\.tex";
 #Default set is doing some bullshit. Don't care about it.
 $cmd = "pwd\n";
 
@@ -119,13 +119,16 @@ EOF
             print $stderr . "\tThe file format is not tex.\n";
         } else {
             print "Tex file has been read\. And executing\:\n";
-            $cmd = "\t" . "pdflatex " . $texfile . "\> last\_run\.log";
+            $cmd = "ln -svf \.\.\/latex\/$texfile current\.tex &&
+                    pdflatex current.tex \> last\_run\.log" ;
             print $cmd . "\n";
             system ($cmd);
             print "\tCompiling log is in last\_run\.log\n";
 
             #Show the pdf file in pdf
             my ($filename,$dir,$ext) = fileparse($texfile,qr/\.[^.]*/);
+            #change the target pdf file into current.pdf
+            $filename = "current" ;
             $cmd = "evince " . $filename . "\.pdf" . "\&";
             print "Now you have the pdf file here as " . $filename . "\.pdf\n";
             system ($cmd);
@@ -146,8 +149,8 @@ EOF
             print "Please specify the filename..\n";
         } else { 
             $fileName = $ARGV[1] ;
-            $cmd = "cd ../latex/ && cp template.tex $fileName && cd - && ln -svf
-            ../latex/$fileName current.tex";
+            $cmd = "cd ../latex/ && cp template.tex $fileName && cd - && 
+            ln -svf ../latex/$fileName current.tex";
             system ($cmd);
         }
         next;
