@@ -63,6 +63,43 @@ Something more on \textit{FPGA IP protection by binding FSM to PUF}
             on MAC.
             \item \textit{critics} If the SI can reverse engineer the IP, all
             the locking part can not work.
+            \end{itemize}
+
+\noindent \textbf{Feb 17,2014}
+\textit{A Pay-per-Use Licensing Scheme for Hardware IP Cores in Recent
+        SRAM-Based FPGAs}
+\indent		\begin{itemize}
+            \item \textit{reverse engineering bit streams} From the bitstream to
+            the netlist, in Proc. ACM/SIGDA Symp. Field-Programmable Gate Arrays
+            (FPGA), Nov. 2008, pp. 264-264
+            \item \textit{taxonomy for hardware security}
+                \begin{itemize}
+                \item \textbf{Low Class Adversary} extract info from a plaintext
+                bit stream.
+                \item \textbf{Middle Class Adversary}
+                A system engineer, who can get access to the purchased IP block,
+                probe the internals of the IP block.
+                \item \textbf{High Class Adversary}
+                Pysically access to the FPGA for getting access to on-chip
+                memory.
+                \end{itemize}
+            \item \textit{main motivation} Most of the encryption of the FPGA
+            IP, the author want to propose the idea of IP protection involving
+            TTP.
+            \item \textit{ASIC IP protection} [19-23]
+                \begin{itemize}
+                \item [19] Remote activation of ICs for piracy prevention and
+                digital right management, in ICCAD 2007
+                \item [20] Active hardware metering for intellectual property
+                protection and security in Proc. USENIX Security Symp., 2007,
+                pp. 291-306
+                \item [21] EPIC: Ending piracy of integrated circuits, DATE 2008
+                \item [22] Protecting bus-based hard-ware IP by secret sharing,
+                DAC 2008, pp. 846-851
+                \item [23] Aanlysis and design of active IC metering schemes,
+                IEEE workshop on hardware-oriented security and trust (HOST),
+                2009, pp. 74-81
+                \end{itemize}
         \end{itemize}
 \end{document}
 
