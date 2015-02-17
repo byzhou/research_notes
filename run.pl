@@ -120,10 +120,19 @@ EOF
         } else {
             print "Tex file has been read\. And executing\:\n";
             $cmd = "ln -svf \.\.\/latex\/$texfile current\.tex &&
-                    pdflatex current.tex \> last\_run\.log" ;
+                    pdflatex current.tex \> last\_run\.log &&
+                    cat last\_run\.log" ;
+            print << "EOF";
+
+            ==================================================================
+            $userName \@ $hostName on $currentTime 
+            ==================================================================
+
+EOF
             print $cmd . "\n";
             system ($cmd);
             print "\tCompiling log is in last\_run\.log\n";
+
 
             #Show the pdf file in pdf
             my ($filename,$dir,$ext) = fileparse($texfile,qr/\.[^.]*/);
