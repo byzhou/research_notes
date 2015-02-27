@@ -5,7 +5,7 @@ use Sys::Hostname;
 
 #This is the default tex file path. It is advised to change this every week.
 #$texfile = "\.\.\/latex\/week3_spring\.tex";
-$texfile = "week4\_spring\.tex";
+$texfile = "week5\_spring\.tex";
 #Default set is doing some bullshit. Don't care about it.
 $cmd = "pwd\n";
 
@@ -84,9 +84,10 @@ EOF
         print "Taking the tex file \.\.\.\n";
         #get the file dir if the file is not in default path
         if ($ARGV[1] ne ""){
-            $texfile = $ARGV[1];
+            $texfile = $ARGV[1] ; 
             print "\tUsing tex file here at " . $texfile . "\n";
         } else {
+            $texfile = "current\.tex" ; 
             print "\tUsing default tex file at " . $texfile . "\n";
         }
 
@@ -95,7 +96,7 @@ EOF
             print $stderr . "\tThe file format is not tex.\n";
         } else {
             print "Tex file has been read\. And executing\:\n";
-            $cmd = "\t" . "pdflatex " . $texfile . "\> last\_run\.log";
+            $cmd = "\t" . "pdflatex " . "\.\.\/latex\/" . $texfile . "\> last\_run\.log";
             print $cmd . "\n";
             system ($cmd);
             print "\tCompiling log is in last\_run\.log\n"
