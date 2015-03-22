@@ -22,7 +22,62 @@
 \textit{a watermarking system for ip protection by buffer insertion technique}
 \indent		\begin{itemize}
             \item \textit{main motivation} IP protection, of course.
-            \item \textit{main idea}
+            \item \textit{main idea} Using buffers for ip privacy. The number of
+            buffers is the specifc due to design.
+        \end{itemize}
+
+
+\noindent \textbf{Feb 28,2014}
+\textit{Provably Secure Active IC Metering Techniques for Piracy Avoidance and
+Digital Rights Management}
+\indent		\begin{itemize}
+                \item \textit{IP core protection} 
+                    \begin{itemize}
+                        \item the functional description of the design
+                        \item unique and unclonable IC identifiers
+                    \end{itemize}
+                \item \textit{enabling or disabling remotely} The locks are embedded
+                in hardware int he form of FSM.
+                \item demos on H.264 MPEG
+                \item PUF design
+                    \begin{itemize}
+                        \item [18] silicon physical random function
+                        \item [19] physical unclonable functions for device
+                        authentication and secret key generation
+                        \item [20] security based on physical unclonability and
+                        disorder
+                    \end{itemize}
+                \item \textit{weak PUF} only generate a limited number of
+                independent outputs.
+                \item \textit{strong PUF} has many possible challenges and
+                reponses.
+        \end{itemize}
+
+\noindent \textbf{Feb 28,2014}
+\textit{Silicon Physical Random Functions}
+\indent		\begin{itemize}
+                \item \textit{PUF def} It is designed for the IC counterfeiting.
+                The problem is very hard to characterize.
+                \item \textit{Attacks}
+                    \begin{itemize}
+                        \item [*] Duplicate a PUF
+                        \item [*] Direct measurement requires opening the
+                        package and several layers of metals
+                        \item [*] Measure a polynomial number of
+                        adaptively-chosen challenges.
+                        \item [*] Detection of the control system to break the
+                        lock. The author said they have done some further
+                        studies on that. see the paper being cited.
+                    \end{itemize}
+        \end{itemize}
+
+\noindent \textbf{Feb 28,2014}
+\textit{Silicon Physical Random Functions}
+\indent		\begin{itemize}
+            \item [*] \textit{avoid use of cells} cd
+            /libraries/NangateOpenCellLibrary/libcells/AND2\_X4
+
+                                            set\_attribute avoid true
         \end{itemize}
 \end{document}
 

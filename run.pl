@@ -83,25 +83,17 @@ EOF
     if ($ARGV[0] eq "-c"){
         print "Taking the tex file \.\.\.\n";
         #get the file dir if the file is not in default path
-        if ($ARGV[1] ne ""){
-            $texfile = $ARGV[1] ; 
-            print "\tUsing tex file here at " . $texfile . "\n";
-        } else {
-            $texfile = "current\.tex" ; 
-            print "\tUsing default tex file at " . $texfile . "\n";
-        }
 
-        #read the tex file and compile it in the default dir
-        if (/$texfile$/ eq "\.tex"){
-            print $stderr . "\tThe file format is not tex.\n";
+        $ARGV[1] = $texfile ;
+
+        if (/$texfile$/ eq "" ) {
+            $cmd = "\t" . "pdflatex " . "current\.tex" ;
+            system ( $cmd ) ;
         } else {
-            print "Tex file has been read\. And executing\:\n";
-            $cmd = "\t" . "pdflatex " . "\.\.\/latex\/" . $texfile . "\> last\_run\.log";
-            print $cmd . "\n";
-            system ($cmd);
-            print "\tCompiling log is in last\_run\.log\n"
-        } 
-        
+            $cmd = "\t" . "pdflatex " . "\.\.\/latex/" . $texfile ;
+            system ( $cmd ) ;
+        }
+                
         next;
     }
      
@@ -116,7 +108,7 @@ EOF
         }
 
         #read the tex file and compile it in the default dir
-        if (/$texfile$/ eq "\.tex"){
+        if (/$texfile$/ eq "\.tex" and /$textfile$/ ne "current\.tex" ){
             print $stderr . "\tThe file format is not tex.\n";
         } else {
             print "Tex file has been read\. And executing\:\n";

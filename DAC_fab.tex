@@ -1,0 +1,72 @@
+\documentclass[]{article}
+\usepackage{graphicx}
+
+\parindent=0pt
+\usepackage[margin=0.5in]{geometry}
+
+\begin{document}
+\pagestyle{empty}
+{\large\textbf{Research Notes}}
+\begin{itemize}
+    \item[*] Created on Mar 9, 2015
+    \item[*] Modified on \today
+    \item[*] Author info: Boyou Zhou\\
+             8 St Mary's St, PHO 340, Boston, MA 02215\\
+             Email: bobzhou@bu.edu, Phone: 617-678-8480
+\end{itemize}
+
+
+\rule[-0.1cm]{7.5in}{0.01cm}\\
+\\
+\noindent \textbf{Mar 9, 2015}
+\textit{Verilog to gds}
+\indent		\begin{itemize}
+            \item \textit{Basic Steps} Synthesis, Floor-planning, and
+            Place-and-Route
+            \item \textit{Input} Liberty Files, timing properties of single
+            gates. Lef Files, dimensions of the gates and the positions of the
+            pins (Detailed strutures are irrelevant for the output of the
+            design) Verilog Files or VHDL Files, the design.
+            \item \textit{Output} Binary Files can be readable by
+            place-and-route tool. We use Cadence Encounter. There should be a
+            command to output a gds file, which contains positions of the gates
+            and metal connections but no inner structures. It is possible to
+            dump the gds file with the information from layer mapping files.
+            Layer mapping files are defined by the technology.
+        \end{itemize}
+
+\textit{gds into virtuoso}
+\indent		\begin{itemize}
+            \item \textit{Input} A library, containing the designes of single
+            gates. gds from par tool, including the informations of the
+            positions of the gates. Name of the top level design. Technology
+            files, may or may not be needed, since the library may have the
+            technology files. Mapping files, may or may not be needed, since the
+            technology files may include it.
+            \item \textit{Output} The entire design in gds.
+        \end{itemize}
+
+\textit{My plan}
+\indent     \begin{itemize}
+            \item {PAR} After place-and-route our design, we dump everything with
+            40nm layer mapping info.
+            \item {Our Library} Create a library of our own attached with 40nm
+            technology. Copy the Cellviews from Nangate. Use DRC to verify.
+            \item {Import design} Import our design with our designed library.
+            Worst case scenario, we need to attach our own mapping file,
+            converted from technology files.
+        \end{itemize}
+
+\textit{My worries}
+\indent     \begin{itemize}
+            \item {Layer Mapping File} EPFL won't allow exporting Layer Mapping
+            Files. Or they do not have layer mapping file. You have to use
+            verilog to synthesize in EPFL. 
+            \item {Dump failed} The entire design can not dumped with another
+            technoloy's layer mapping file. Again, you have to resynthesis.
+            \item {Copy failed} You have to draw everything yourself.
+            \item {Import failed} You can first try to write your own version of
+            mapping file. If that does not work, start from synthesis.
+            \end{itemize}
+\end{document}
+
