@@ -2,9 +2,13 @@
 \usepackage{graphicx}
 \usepackage{color}
 
+\newcommand{\todo}[1]{{\color{red}\textbf{#1}}}
+\newcommand{\solved}[1]{{\color{blue}\textit{#1}}}
+
 \parindent=0pt
 \usepackage[margin=0.5in]{geometry}
 
+\graphicspath{{../img/mar22/}}
 \begin{document}
 \pagestyle{empty}
 {\large\textbf{Research Notes}}
@@ -35,23 +39,40 @@
                 The problem should be comparing the existing
                 one-time-programming methods to new methods.
                 \item [*] What is the state-of-art reverse engineering methods?
-                \item It is possible to reverse engineering the entire ASIC.
+                \item \solved{It is possible to reverse engineering the entire ASIC.
+                However, the cost is very high. It is totally legal to reverse
+                engineering the entire chip.}
                 \item [*] Is it possible to reverse engneering the entire
                 netlist?
                 \item [*] What is the on-chip laser price?
                 \item It is not cost-effective.
-                \item {\color{red}The story goes with the TRNG. We use the metastability
+                \item \todo{The story goes with the TRNG. We use the metastability
                 to generate the bit. The bit is written by state-of-art OTP (One
                 Time Programmable Units), instead of memristor. The innovative
                 part of the idea is that we use the laser seebeck voltage to
                 generate stability from metastability.}
-                \item programmable read-only memory (PROM) or field programmable
-                read-only memory (FPROM) or one-time programmable non-volatile
-                memory (OTP NVM) 
+                \item \solved{popular OTP are} programmable read-only memory
+                (PROM) or field programmable read-only memory (FPROM) or
+                one-time programmable non-volatile memory (OTP NVM) 
                 \item modify the power analysis tool flow
+                    \begin{itemize}
+                        \item spectre command line simulation, as well as calibre
+                    \end{itemize}
+                \item \solved{talk to Sean about HOTSPOT} HOSTSPOT can be used
+                for thermal simulation, but it needs a lot more time. FDTD makes
+                more sense. This matches with what I have seen. \todo{what is
+                the performance evaluation from HOTSPOT?}
+                \item \solved{why it is better than directly writing the keys on
+                the chip?} Mon 23 Mar 2015 05:10:56 PM EDT 
                 \begin{itemize}
-                    \item spectre command line simulation, as well as calibre
+                    \item If it is ROM, than the information must be written on
+                    mask.
+                    \item OTP fuse is a rather old technology.
+                    \item memristor needs to be refreshing, after reading.
+                    \item The proposed technology saves a lot of area.
+                    \item There is no end attached to the design.
                 \end{itemize}
+
                 
         \end{itemize}
 
@@ -107,24 +128,45 @@
                 \end{itemize} 
             \end{itemize}    
 
-\noindent \textbf{Mar 22, 2015}
+\noindent \textbf{Mon 23 Mar 2015 03:51:45 PM EDT}
 \textit{2.4Gbps, 7mW All-Digital PVT-Variation Tolerant True Random Number
 Generator for 45nm CMOS High-Performance Microprocessors}
 \indent     \begin{itemize}
             \item cross-coupled inverter pair
-            \item some experiment results need to be replicated.
+            \item some experiment results need to be replicated.\solved{Mon 23
+            Mar 2015 03:44:55 PM EDT}
+                \begin{itemize}
+                    \item hspice simulation shows that the condition for getting
+                    rid of the metastability is to applied certain amount of
+                    current instead of accumulated charges, aka, voltage
+                    changes.
+                    \item \todo{This means that in order to jump out of
+                    metastability, we need at least $3mA$. In the Invasive PUF
+                    Analysis, it is been discussed that this amount of current
+                    should at least apply 
+                    $\frac{3mA * Resistance}{0.4mV/K^{-1}}$ to
+                    $\frac{3mA * Resistance}{0.2mV/K^{-1}}$ 
+                    amount of temperature difference.The temp difference should
+                    be $95K=\frac{38}{0.4}$ to $190K=\frac{38}{0.2}$}
+                \end{itemize}
+            \item metastability time
+            \begin{figure}
+                \begin{center}
+                    \includegraphics[width=4in]{stable.png}
+                    \caption{metastability to stability time}
+                \end{center}
+            \end{figure}
+
             \end{itemize}
 
 \noindent \textbf{Mar 22, 2015}
 \textit{OTP}
 \indent     \begin{itemize}
-            \item SRAM
-            \item Fuse \textbf{possible solution}
-            \item Antifuse \textbf{possible solution}
+            \item Fuse \textbf{possible solution} Antifuse \textbf{possible
+            solution}
             \item PROM
-            \item EPROM
-            \item EEPROM
-            \item Flash
+            \item EPROM EEPROM FLASH
+            \item new technology with non-volatile memory, PCRAM, MRAM, RRAM 
             \end{itemize}
 
 \noindent \textbf{Mar 22, 2015}
@@ -135,12 +177,12 @@ Using Inherent PUFs}
             about reverse engineering
             \end{itemize}
 
-\end{document}
-
 \noindent \textbf{Mon 23 Mar 2015 01:15:43 PM EDT}
 \textit{problems with power analysis}
 \indent		\begin{itemize}
-            \item Make sure the difference between power analysis and statistic
-            analysis
-            \item cadence can read wlf flies, which can be fed into hspice.
+                \item Make sure the difference between power analysis and statistic
+                analysis
+                \item cadence can read wlf flies, which can be fed into hspice.
             \end{itemize}
+\end{document}
+
