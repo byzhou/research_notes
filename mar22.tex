@@ -1,5 +1,6 @@
 \documentclass[]{article}
 \usepackage{graphicx}
+\usepackage{color}
 
 \parindent=0pt
 \usepackage[margin=0.5in]{geometry}
@@ -22,6 +23,7 @@
 \noindent \textbf{Mar 22, 2015}
 \textit{questions for ICCAD paper}
 \indent		\begin{itemize}
+
                 \item [*] Is there any papers have Hardware security problems
                 published in ICCAD? How much percentages are the hardware
                 security components compared to the CAD parts?
@@ -33,10 +35,24 @@
                 The problem should be comparing the existing
                 one-time-programming methods to new methods.
                 \item [*] What is the state-of-art reverse engineering methods?
+                \item It is possible to reverse engineering the entire ASIC.
                 \item [*] Is it possible to reverse engneering the entire
                 netlist?
+                \item [*] What is the on-chip laser price?
+                \item It is not cost-effective.
+                \item {\color{red}The story goes with the TRNG. We use the metastability
+                to generate the bit. The bit is written by state-of-art OTP (One
+                Time Programmable Units), instead of memristor. The innovative
+                part of the idea is that we use the laser seebeck voltage to
+                generate stability from metastability.}
+                \item programmable read-only memory (PROM) or field programmable
+                read-only memory (FPROM) or one-time programmable non-volatile
+                memory (OTP NVM) 
+                \item modify the power analysis tool flow
+                \item spectre command line simulation, as well as calibre
                 
         \end{itemize}
+
 \noindent \textbf{Mar 22, 2015}
 \textit{Passive switching of eletromagnetic devices with memristors}
 \indent		\begin{itemize}
@@ -62,19 +78,66 @@
 
         \end{itemize}
 
-
 \noindent \textbf{Mar 22, 2015}
 \textit{Temperature Tracking:An Innovative Run-Time Approach for Hardware Trojan
     Detection}
 \indent		\begin{itemize}
-                \item Try to decide how much percentages do the CAD components take
-                compared to HT parts.
+                \item \textit{Main purpose of reading this paper} Try to decide
+                how much percentages do the CAD components take compared to HT
+                parts.
             \end{itemize}
 
 \noindent \textbf{Mar 22, 2015}
 \textit{The State-of-Art in IC Reverse Engineering}
 \indent     \begin{itemize}
-                \item
+                \item types of RE
+                \begin{itemize}
+                    \item \textit{device depot} Dissolving packages
+                    \item \textit{delayering IC}
+                    \item \textit{imaging}
+                    \item \textit{annotation}
+                    \item \textit{verification and schematic creation}
+                    \item \textit{schematic analysis} This is the most difficult
+                    part, since the digital logic has been re-organized in
+                    hierarchy forms. It can be re-created through bottom-up
+                    form. Thus, a complete process of reverse-engineering can be
+                    done.
+                \end{itemize} 
             \end{itemize}    
+
+\noindent \textbf{Mar 22, 2015}
+\textit{2.4Gbps, 7mW All-Digital PVT-Variation Tolerant True Random Number
+Generator for 45nm CMOS High-Performance Microprocessors}
+\indent     \begin{itemize}
+            \item cross-coupled inverter pair
+            \item some experiment results need to be replicated.
+            \end{itemize}
+
+\noindent \textbf{Mar 22, 2015}
+\textit{OTP}
+\indent     \begin{itemize}
+            \item SRAM
+            \item Fuse \textbf{possible solution}
+            \item Antifuse \textbf{possible solution}
+            \item PROM
+            \item EPROM
+            \item EEPROM
+            \item Flash
+            \end{itemize}
+
+\noindent \textbf{Mar 22, 2015}
+\textit{Lightweight Anti-Counterfeiting Solution for Low-End Commodity Hardware
+Using Inherent PUFs}
+\indent     \begin{itemize}
+            \item read about the way the argue about how to get rid of the doubt
+            about reverse engineering
+            \end{itemize}
+
 \end{document}
 
+\noindent \textbf{Mon 23 Mar 2015 01:15:43 PM EDT}
+\textit{problems with power analysis}
+\indent		\begin{itemize}
+            \item Make sure the difference between power analysis and statistic
+            analysis
+            \end{itemize}
