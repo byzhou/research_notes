@@ -78,6 +78,7 @@
                 /mnt/support/software/linux/all/vlsi/cadence/ASSURA4\_614/tools.lnx86/assura/bin/32bit/assura
                 \end{equation}
                 for DRC
+                \item \todo{ask Ronen about the area problem}
 
                 
         \end{itemize}
@@ -189,6 +190,22 @@ Using Inherent PUFs}
                 \item Make sure the difference between power analysis and statistic
                 analysis
                 \item cadence can read wlf flies, which can be fed into hspice.
+            \end{itemize}
+
+\noindent \textbf{Tue 24 Mar 2015 09:30:06 PM EDT}
+\textit{system design of the tests}
+\indent		\begin{itemize}
+            \item \solved{how much current exactly I need?} In the Farhana's
+            paper, it seems that 2mV can kick the system out of metastability.
+            With the initialization, it seems that I can do simulations with a
+            very low current.
+            \item Wed 25 Mar 2015 02:59:43 PM EDT \todo{verilog simulation
+            environment setup}
+            \item Wed 25 Mar 2015 03:00:22 PM EDT \todo{hotspot simulation to
+            determine the heat disscipation and relative affects.}
+            \item Thu 26 Mar 2015 05:15:52 PM EDT \solved{how to use delay lines
+            to get perfect distributed results} Configuration must be done. The
+            coarse and fine tunning is in Farhana's paper.
             \end{itemize}
 \end{document}
 
