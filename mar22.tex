@@ -78,7 +78,7 @@
                 /mnt/support/software/linux/all/vlsi/cadence/ASSURA4\_614/tools.lnx86/assura/bin/32bit/assura
                 \end{equation}
                 for DRC
-                \item \todo{ask Ronen about the area problem}
+                \item \todo{ask Ronen about the area problem} related to HOTSPOT
 
                 
         \end{itemize}
@@ -147,7 +147,7 @@ Generator for 45nm CMOS High-Performance Microprocessors}
                     rid of the metastability is to applied certain amount of
                     current instead of accumulated charges, aka, voltage
                     changes.
-                    \item \todo{This means that in order to jump out of
+                    \item \solved{This means that in order to jump out of
                     metastability, we need at least $3mA$. In the Invasive PUF
                     Analysis, it is been discussed that this amount of current
                     should at least apply 
@@ -155,6 +155,7 @@ Generator for 45nm CMOS High-Performance Microprocessors}
                     $\frac{3mA * Resistance}{0.2mV/K^{-1}}$ 
                     amount of temperature difference.The temp difference should
                     be $95K=\frac{38}{0.4}$ to $190K=\frac{38}{0.2}$}
+                    From Farhana's paper, it seems that $5-10K$ is sufficient. 
                 \end{itemize}
             \item metastability time
             \begin{figure}
@@ -199,13 +200,17 @@ Using Inherent PUFs}
             paper, it seems that 2mV can kick the system out of metastability.
             With the initialization, it seems that I can do simulations with a
             very low current.
-            \item Wed 25 Mar 2015 02:59:43 PM EDT \todo{verilog simulation
-            environment setup}
+            \item Wed 25 Mar 2015 02:59:43 PM EDT \solved{verilog simulation
+            environment setup}Thu 26 Mar 2015 05:17:23 PM EDT ruby based verilog
             \item Wed 25 Mar 2015 03:00:22 PM EDT \todo{hotspot simulation to
             determine the heat disscipation and relative affects.}
             \item Thu 26 Mar 2015 05:15:52 PM EDT \solved{how to use delay lines
             to get perfect distributed results} Configuration must be done. The
-            coarse and fine tunning is in Farhana's paper.
+            coarse and fine tunning is in Farhana's paper. Use a basic control
+            loop and we can use that for the system. The control loop can be
+            easily implemented with an FSM.
+            \item Thu 26 Mar 2015 05:18:50 PM EDT \solved{frame work has been
+            designed.}
             \end{itemize}
 \end{document}
 
